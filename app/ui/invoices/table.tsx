@@ -113,6 +113,10 @@ export default async function InvoicesTable({
                       <DeleteInvoice id={invoice.id} />
                     </div>
                   </td>
+                  <td className="flex justify-end gap-2 whitespace-nowrap px-6 py-4 text-sm">
+                      <UpdateInvoice id={invoice.id} />
+                      <DeleteInvoice id={invoice.id} />
+                  </td>
                 </tr>
               ))}
             </tbody>
