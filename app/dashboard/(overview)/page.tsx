@@ -8,7 +8,13 @@ import {
   CardsSkeleton,
 } from '@/app/ui/skeletons';
 import CardWrapper from '@/app/ui/dashboard/cards';
- 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Dashboard | Your Application Name',
+  description: 'View your dashboard on Your Application Name.',
+};
+
 export default async function Page() {
   // Remove `const latestInvoices = await fetchLatestInvoices()`
   // const {
@@ -20,9 +26,12 @@ export default async function Page() {
  
   return (
     <main>
-      <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
-        Dashboard
-      </h1>
+      <div>
+        {/* Your dashboard page content */}
+        <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
+          Dashboard
+        </h1>
+      </div>
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {/* <Card title="Collected" value={totalPaidInvoices} type="collected" />
         <Card title="Pending" value={totalPendingInvoices} type="pending" />
